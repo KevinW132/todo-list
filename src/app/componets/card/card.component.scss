@@ -1,0 +1,199 @@
+.todolist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+h5{
+    display: flex;
+    justify-content: center;
+}
+input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0%;
+}
+.input{
+    display: flex;
+    flex-grow: 2;
+}
+.ingreso{
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+    margin-bottom: 20px;
+}
+.plusButton {
+    /* Config start */
+    --plus_sideLength: 2.5rem;
+    --plus_topRightTriangleSideLength: 0.9rem;
+    /* Config end */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: var(--plus_sideLength);
+    height: var(--plus_sideLength);
+    background-color: #25d348;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.plusButton:hover {
+    cursor: pointer;
+    background-color: white;
+    border: solid 0.25px #25d348
+}
+
+.plusButton>.plusIcon {
+    fill: white;
+    width: calc(var(--plus_sideLength) * 0.7);
+    height: calc(var(--plus_sideLength) * 0.7);
+    z-index: 1;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+}
+
+.plusButton:hover>.plusIcon {
+    fill: #25d348;
+    transform: rotate(180deg);
+}
+
+.plusButton:focus-visible>.plusIcon {
+    fill: black;
+    transform: rotate(180deg);
+}
+
+.ingreso {
+    display: flex;
+}
+
+.button-delete {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+    transition-duration: .3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.svgIcon {
+    width: 12px;
+    transition-duration: .3s;
+}
+
+.svgIcon path {
+    fill: white;
+}
+
+.button-delete:hover {
+    width: 100px;
+    border-radius: 50px;
+    transition-duration: .3s;
+    background-color: rgb(255, 69, 69);
+    align-items: center;
+}
+
+.button-delete:hover .svgIcon {
+    width: 50px;
+    transition-duration: .3s;
+    transform: translateY(60%);
+}
+
+.button-delete::before {
+    position: absolute;
+    top: -20px;
+    content: "Eliminar";
+    color: white;
+    transition-duration: .3s;
+    font-size: 2px;
+}
+
+.button-delete:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    transform: translateY(30px);
+    transition-duration: .3s;
+}
+
+.button-complete {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+    transition-duration: .3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.svgIcon-complete {
+    width: 12px;
+    transition-duration: .3s;
+}
+
+.svgIcon-complete path {
+    fill: white;
+}
+
+.button-complete:hover {
+    width: 100px;
+    border-radius: 50px;
+    transition-duration: .3s;
+    background-color: rgb(69, 255, 69);
+    align-items: center;
+}
+
+.button-complete:hover .svgIcon-complete {
+    width: 40px;
+    transition-duration: .3s;
+    transform: translateY(10%) translateX(50%);
+}
+
+.button-complete::before {
+    position: absolute;
+    top: -24px;
+    left: 10px;
+    content: "Completar";
+    color: white;
+    transition-duration: .3s;
+    font-size: 2px;
+}
+
+.button-complete:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    transform: translateY(30px);
+    transition-duration: .3s;
+}
+.listadecosas{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 20px 0px 20px;
+}
+.botonescosas{
+    display: flex;
+    align-items: center;
+}
+.listadecosas{
+    border-bottom: 1px solid var(--bs-list-group-border-color);
+    margin-bottom: 5px;
+}
+li{
+    border: none !important;
+}
