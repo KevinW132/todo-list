@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 h5{
     display: flex;
@@ -13,6 +13,19 @@ input {
     border-left: none;
     border-right: none;
     border-radius: 0%;
+}
+.card{
+    width: 500px;
+}
+.card-activated{
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+}
+.tareasterminadas{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
 }
 .input{
     display: flex;
